@@ -1,10 +1,38 @@
 //ESERCIZIO NUMEO PARI DISPARI
 
-//creo variabile numeroUtent con prompt
+//creo variabile numeroUtente con prompt
 
 let numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
-//Verifico che il numero inserito dall'utente sia valido
+
+// Creo variabile sceltaUtente con prompt pari oppure dispari
+let sceltaUtente = prompt("Scegli pari o dispari:").toLowerCase();
+
+//Verifico validità scelta e numero
+
+if((sceltaUtente === "pari" || sceltaUtente === "dispari") && !isNaN(numeroUtente) && numeroUtente >=1 && numeroUtente <= 5){
+    
+     // Genera un numero casuale per il computer
+    
+     let numeroComputer = generaNumeroCasuale(); 
+     
+       // Somma i due numeri
+    let somma = numeroUtente + numeroComputer;
+
+       // Visualizza i risultati in console
+
+       console.log(`Numero utente: ${numeroUtente}`);
+       console.log(`Numero computer: ${numeroComputer}`);
+       console.log(`Somma: ${somma}`);
+
+       // Verifica chi ha vinto e se la somma è pari o dispari
+
+    if ((isPari(somma) && sceltaUtente === "pari") || (!isPari(somma) && sceltaUtente === "dispari")) {
+        console.log(`Complimenti! Hai vinto! La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}.`);
+    } else {
+        console.log(`Mi dispiace, hai perso. La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}. Prova di nuovo!`);
+    }
+}
 
 
 
