@@ -1,13 +1,17 @@
 esercizio 28/02/2024 <br>
 paliedispari
 ===
-Palidroma<br>
+Palindroma<br>
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 ## Svolgimento
 1. creao una variabile con un prompt dove chiedo di inserire all'utente una parola
-2. Creo funzione per verificare se una parola è un palindromo
-3. Richiamo la funzione utilizzando if se parola palindroma allora allert parola palindroma, else altrimenti alert parola non palindroma<br>
+2. Creo funzione per verificare se la parola inserita è palindroma
+3. Confronto i caratteri della parola tramite un ciclo for che itera per metà della lunghezza 
+4. Se i caratteri non corrispondono la parola non è palindroma e mi restituisce false, altrimenti restituisce true ed il ciclo si chiude.
+5. Quindi se la parola inserita dall'utente sarà palindroma mi uscirà un allert confermandomi parola palindroma, altreimenti else alert la parola inserita non è palindroma.
+
+
 
 ## Esercizio pari e dispari
 **Consegna** L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
