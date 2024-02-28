@@ -25,17 +25,23 @@ if((sceltaUtente === "pari" || sceltaUtente === "dispari") && !isNaN(numeroUtent
        console.log(`Numero computer: ${numeroComputer}`);
        console.log(`Somma: ${somma}`);
 
-       // Verifica chi ha vinto e se la somma è pari o dispari
+       // Verifica chi ha vinto e se la somma è pari o dispari con operatore ternario
 
-    if ((isPari(somma) && sceltaUtente === "pari") || (!isPari(somma) && sceltaUtente === "dispari")) {
-        console.log(`Complimenti! Hai vinto! La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}.`);
+    // if ((isPari(somma) && sceltaUtente === "pari") || (!isPari(somma) && sceltaUtente === "dispari")) {
+    //     console.log(`Complimenti! Hai vinto! La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}.`);
+    // } else {
+    //     console.log(`Mi dispiace, hai perso. La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}. Prova di nuovo!`);
+    // }
+
+    //Verifica chi ha vinto senza operatore ternario
+
+    if (isPari(somma)) {
+        console.log(`Complimenti! Hai vinto! La somma (${somma}) è pari.`);
     } else {
-        console.log(`Mi dispiace, hai perso. La somma (${somma}) è ${isPari(somma) ? 'pari' : 'dispari'}. Prova di nuovo!`);
+        console.log(`Mi dispiace, hai perso. La somma (${somma}) è dispari. Prova di nuovo!`);
     }
-}
 
-
-
+    }
 
 //Creo le funzioni
 // Funzione per generare un numero casuale tra 1 e 5
